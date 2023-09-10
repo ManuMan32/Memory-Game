@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jumping World Memory Game</title>
+		<link rel="stylesheet" type="text/css" href="cardGame.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<audio id="audioSelect">
+			<source src="cardSelect.wav" type="audio/wav">
+			Your browser doesn't support audio files.
+		</audio>
+		<audio id="audioPick">
+			<source src="cardPick.wav" type="audio/wav">
+			Your browser doesn't support audio files.
+		</audio>
+		<audio id="audioFail">
+			<source src="cardFail.wav" type="audio/wav">
+			Your browser doesn't support audio files.
+		</audio>
+	</head>
+
+	<body>
+		<div id="screen">
+			<div id="content">
+				<header id="info-container" class="container">
+					<div><span id="pointCounter">0</span></div>
+					<div><span class="material-symbols-outlined">timer</span>&nbsp;<span id="secondsCounter">1</span></div>
+					<span>Pairs:&nbsp;<span id="pairsCounter">0</span></span>
+					<span>Tries:&nbsp;<span id="triesCounter">0</span></span>
+					<button id="button-options" class="button">Options</button>
+				</header>
+				<div id="cards-container" class="container container-flex">
+					<button id="button-start" class="button">Start Game</button>
+				</div>
+				<div id="records-container" class="container">
+					<h4 class="records-content">&nbsp;&nbsp;Records</h4>
+					<p class="records-content">#1: <span id="record-num1"> --- </span></p>
+					<p class="records-content">#2: <span id="record-num2"> --- </span></p>
+					<p class="records-content">#3: <span id="record-num3"> --- </span></p>
+				</div>
+			</div>
+		</div>
+		<script src="cardGame.js"></script>
+		<script src="options.js"></script>
+	</body>
+
+</html>
