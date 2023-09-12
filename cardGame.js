@@ -71,14 +71,12 @@ class Card {
 					cardsUp--;
 					cardsUpId[cardsUp] = null;
 					cardsUpObj[cardsUp] = null;
-					elm.classList.add("unshown");
-					elm.classList.remove("shown");
+					elm.classList.replace("shown","unshown");
 				} else {
 					cardsUpId[cardsUp] = this.id;
 					cardsUpObj[cardsUp] = this;
 					cardsUp++;
-					elm.classList.add("shown");
-					elm.classList.remove("unshown");
+					elm.classList.replace("unshown","shown");
 				}
 				this.shown = (!this.shown);
 				if (audio && cardsUp < 2) audioSelect.play();
@@ -253,11 +251,10 @@ function createRestartButton() {
 	button.innerHTML = "Play Again";
 	button.classList.add("button");
 	button.id = "button-start";
-	button.addEventListener("click",()=>{
+	button.addEventListener("click",function(){
 		pairs = 0;
 		resetValues();
-		const buttonRemove = document.getElementById("button-start");
-		startGame(buttonRemove);
+		startGame(this);
 	});
 	cardsContainer.classList.add("container-flex");
 	cardsContainer.appendChild(button);
